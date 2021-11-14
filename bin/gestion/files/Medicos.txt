@@ -1,0 +1,2 @@
+1,Juan,false,0.0,0.0
+2,Camilo,false,1.0,2.3
