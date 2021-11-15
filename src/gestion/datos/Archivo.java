@@ -1,6 +1,7 @@
 package gestion.datos;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
@@ -9,7 +10,8 @@ public class Archivo {
 	public Boolean existeRegistro(String buscador) throws IOException{
 		int contador = 0;
 		boolean existe=false;
-        try (BufferedReader br = new BufferedReader(new FileReader("..\\files\\Medicos.txt"))) {
+		File f=new File("..");
+		try (BufferedReader br = new BufferedReader(new FileReader("src\\gestion\\files\\Medicos.txt"))) {
             String record;
 
             System.out.println(" ------------------------------------------------------------------------------------------------- ");

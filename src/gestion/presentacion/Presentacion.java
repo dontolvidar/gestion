@@ -6,6 +6,7 @@ import gestion.reglas.Medico;
 import gestion.reglas.Software;
 
 public class Presentacion {
+
 	public Medico registroMedico() {
 		Medico medico= new Medico();
 		String id=JOptionPane.showInputDialog("Ingrese la cedula del medico");

@@ -20,12 +20,11 @@ public class Main {
 		
 		/*---------------------------------menu Controlador---------------------------------*/
 		Menu menu= new Menu();
-		switch (menu.capturarOpcion()) {
+		switch (menu.capturarOpcion()) {// Registrar medico
 			case 1:
-				Medico medico=new Medico();
-				datos.medicoExistente(presenta.registroMedico());
+				System.out.println(datos.medicoExistente(presenta.registroMedico()));
 			break;
+			
 		}
 	}
-
 }
