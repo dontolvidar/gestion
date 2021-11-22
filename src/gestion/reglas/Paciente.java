@@ -1,32 +1,18 @@
 package gestion.reglas;
 
-public class Paciente {
-	private String ID, nombre;
+public class Paciente extends Persona{
 	private long turno;
 	private String estado,prioridad,indicador;
-	public Paciente(String iD, String nombre, long turno, String estado, String prioridad, String indicador) {
-		super();
-		ID = iD;
-		this.nombre = nombre;
+	public Paciente(String id, String nombre, long turno, String estado, String prioridad, String indicador) {
+		super(id,nombre);
 		this.turno = turno;
 		this.estado = estado;
 		this.prioridad = prioridad;
 		this.indicador = indicador;
 	}
-	public Paciente() {
-		super();
-	}
-	public String getID() {
-		return ID;
-	}
-	public void setID(String iD) {
-		ID = iD;
-	}
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public Paciente(String id, String nombre) {
+		super(id, nombre);
+		// TODO Auto-generated constructor stub
 	}
 	public long getTurno() {
 		return turno;
@@ -54,8 +40,7 @@ public class Paciente {
 	}
 	@Override
 	public String toString() {
-		return "Paciente [ID=" + ID + ", nombre=" + nombre + ", turno=" + turno + ", estado=" + estado + ", prioridad="
-				+ prioridad + ", indicador=" + indicador + "]";
+		return id+","+nombre+","+turno + "," + estado + "," + prioridad + ","+ indicador;
 	}
 	
 	
