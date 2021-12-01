@@ -1,14 +1,16 @@
 package gestion.reglas;
 
 public class Paciente extends Persona{
-	private long turno;
-	private String estado,prioridad,indicador;
-	public Paciente(String id, String nombre, long turno, String estado, String prioridad, String indicador) {
+	private long turno=0;
+	private String estado="1";
+	private String prioridad="-1";
+	private String turnoatencion="-1";
+	public Paciente(String id, String nombre, long turno, String estado, String prioridad, String turnoatencion) {
 		super(id,nombre);
 		this.turno = turno;
 		this.estado = estado;
 		this.prioridad = prioridad;
-		this.indicador = indicador;
+		this.turnoatencion = turnoatencion;
 	}
 	public Paciente(String id, String nombre) {
 		super(id, nombre);
@@ -32,15 +34,16 @@ public class Paciente extends Persona{
 	public void setPrioridad(String prioridad) {
 		this.prioridad = prioridad;
 	}
-	public String getIndicador() {
-		return indicador;
+	
+	public String getTurnoatencion() {
+		return turnoatencion;
 	}
-	public void setIndicador(String indicador) {
-		this.indicador = indicador;
+	public void setTurnoatencion(String turnoatencion) {
+		this.turnoatencion = turnoatencion;
 	}
 	@Override
 	public String toString() {
-		return id+","+nombre+","+turno + "," + estado + "," + prioridad + ","+ indicador;
+		return id+","+nombre+","+turno + "," + estado + "," + prioridad + ","+ turnoatencion;
 	}
 	
 	
